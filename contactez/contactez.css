@@ -1,0 +1,919 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing:content-box;
+    font-size:12px;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background: url(images/page-pattern.png);
+}
+
+/*----- Start Nav -----*/
+nav {
+    height:fit-content;
+    background: transparent;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 10;
+    background-color: #f5c527;
+}
+nav .logo {
+    width:fit-content;
+    margin:0px 5vw 0 -50px;
+}
+
+nav .menu-bar {
+    width:fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:0 1vw;
+    z-index: 2;
+
+}
+nav .menu-bar .menu-list {
+    width:fit-content;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    z-index: 2;
+}
+nav .menu-bar .menu-list li a {
+    display: block;
+    font-size:1.6rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:600;
+    letter-spacing: 0.4mm;
+    text-decoration: none;
+    color:#1a1918;
+    padding:7px 0px;
+    margin:0 1.5vw;
+    position:relative;
+    overflow: hidden;
+}
+
+.menu-list li {
+    display: inline-block;
+    position: relative;
+    color: #ffc200;
+}
+
+.menu-list li::after {
+content: '';
+position: absolute;
+width: 100%;
+transform: scaleX(0);
+height: 4px;
+bottom: -10px;
+left: 0;
+background-color: #1a1918;
+transform-origin: bottom right;
+transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.menu-list li:hover::after {
+transform: scaleX(1);
+transform-origin: bottom left;
+}
+
+
+
+
+
+nav .menu-bar .search {
+    width: 12vw;
+    height:40px;
+    position: relative;
+    border-radius:5px;
+    overflow-x: hidden;
+    z-index: 2;
+}
+nav .menu-bar .search a {
+    text-decoration: none;
+    color:#1a1918;
+    position:absolute;
+    top:50%;
+    right: 50%;
+    transform: translate(0,-50%);
+    transition:right 400ms linear;
+}
+nav .menu-bar .search-on a {
+    right: 5%;
+}
+nav .menu-bar .search a i {
+    font-size:2rem;
+}
+/*----- End Nav -----*/
+
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.contacte-nous {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.contacte-nous iframe {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 70px;
+}
+.contacte-nous h2 {
+    font-size: 3.5rem;
+    font-family: 'Nunito', sans-serif;
+    padding:0 70px;
+    color:#414446;
+}
+.contacte-nous hr {
+    width: 80%;
+    padding:0 70px
+}
+.contacte-nous .contacte-element {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin:0 70px;
+}
+.contacte-nous .contacte-element .media {
+    display: flex;
+    flex-direction: column;
+}
+.contacte-nous .contacte-element .media h3 {
+    font-size: 2.2rem;
+    font-family: 'Nunito', sans-serif; 
+    color:#af9029;
+}
+.contacte-nous .contacte-element .media b {
+    font-size: 1.4rem;
+    font-family: 'Nunito', sans-serif; 
+    margin:3px 0;
+    color: rgb(95, 95, 95);
+}
+.contacte-nous .contacte-element .media a {
+    margin:5px 0;
+    font-size: 1.1rem;
+    font-family: 'Nunito', sans-serif; 
+    margin:5px 0;
+    color: rgb(95, 95, 95);
+}
+.contacte-nous .contacte-element .contacte-input {
+    margin: 0px auto;
+}
+.contacte-nous .contacte-element .contacte-input form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200%;
+    margin-left:-200px;
+}
+.contacte-nous .contacte-element .contacte-input form .f-in {
+    margin:10px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.f-in div {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+    margin:1rem 1rem;
+}
+.f-in div input {
+    width:100%;
+    padding:2rem 0.5rem 0.5rem 1.3rem;
+    border:none;
+    outline:none;
+    border-bottom:2px solid gray;
+    border-radius:5px;
+    background-color:rgb(238, 238, 255);
+    color:rgb(32, 31, 31);
+    font-size:1.1rem;
+    font-family: 'Nunito', sans-serif;    
+}
+.f-in div label {
+    height:100%;
+    width:100%;
+    position:absolute;
+    pointer-events:none;
+}
+.f-in div label::after {
+    content:"";
+    height:100%;
+    width:100%;
+    position:absolute;
+    bottom:-1.2px;
+    left:0;
+    border-bottom:3px solid #f5c527;
+    transform:translateX(-100%);
+    transition:transform 650ms ease;
+}
+.f-in div label span {
+    font-size:1.2rem;
+    font-weight:400;
+    color:#af9029;
+    position:absolute;
+    top:45%;
+    left:3%;
+    transition:transform 650ms ease;
+}
+
+.f-in div input:focus +  label span ,
+.f-in div input:valid +  label span  {
+    transform:translateY(-100%);
+    color:#f5c527;
+}
+.f-in div input:focus +  label::after,
+.f-in div input:valid +  label::after {
+    transform:translateX(0%);
+}
+
+
+
+.text-form {
+    width:100%;
+    height:100%;
+    margin:1.5rem 0;
+    position:relative;
+    overflow:hidden;
+}
+.text-form #message {
+    height:100%;
+    width:100%;
+    background-color:rgb(238, 238, 255);
+    color:rgb(32, 31, 31);
+    font-size:1.3rem;
+    font-family: 'Nunito', sans-serif;    
+    outline:none;
+    border:none;
+    border-bottom:2px solid gray;
+    padding:2.5rem 1rem 1rem 1.3rem;
+}
+
+.text-form .label-message {
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0%;
+    left:0%;
+    pointer-events:none;
+}
+.text-form .label-message span {
+    font-size:1.4rem;
+    position:absolute;
+    top:15%;
+    left:3.5%;
+    transition:transform 650ms ease;
+    color: #af9029;
+}
+.label-message::after {
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    bottom:1%;
+    left:0;
+    border-bottom:3px solid #f5c527;
+    transform:translateX(-100%);
+    transition:transform 650ms ease;
+}
+#message:focus + .label-message span, 
+#message:valid + .label-message span {
+    color:#f5c527;
+    transform:translateY(-140%);
+}
+#message:focus + .label-message::after ,
+#message:valid + .label-message::after {
+    transform:translateX(0%);
+}
+
+
+.submit-form {
+    width:65%;
+    height:100%;
+    position:relative;
+    text-align: center;
+}
+
+.submit-form input {
+    height:100%;
+    width:fit-content;
+    font-size:1.3rem;
+    font-weight:900;
+    color:rgb(240, 240, 240);
+    background-color:#af9029;
+    outline:none;
+    cursor:pointer;
+    border:none;
+    border-radius:5px;
+    padding:0.8rem 1.5rem;
+    transition: background 250ms linear;
+}
+
+.submit-form input:hover ,
+.submit-form input:active {
+    background-color:#f5c527;
+}
+
+
+
+
+@media (max-width:1000px) {
+    .contacte-nous .contacte-element .contacte-input form {
+        width: 120%;
+        margin-left:-50px;
+    }
+}
+@media (max-width:950px) {
+    .contacte-nous .contacte-element .contacte-input form {
+        width: 100%;
+        margin-left:0px;
+    }
+}
+
+@media (max-width:890px) {
+    .contacte-nous .contacte-element {
+        margin: 0 50px;
+    }
+
+    .contacte-nous hr {
+        width: 60%;
+    }
+    
+.f-in div {
+    margin:0.5rem;
+}
+.f-in div input {
+    padding:2rem 0.5rem 0.5rem 1.3rem;   
+}
+.f-in div label span {
+    font-size:1.3rem;
+}
+.text-form {
+    margin:1.5rem 1rem;
+}
+.text-form #message {
+    height:100%;
+    width:90%;
+    padding:2.5rem 1rem 1rem 1.3rem;
+}
+
+.text-form .label-message {
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0%;
+    left:0%;
+    pointer-events:none;
+}
+.text-form .label-message span {
+    font-size:1.3rem;
+    position:absolute;
+    top:15%;
+    left:5%;
+    transition:transform 650ms ease;
+}
+.label-message::after {
+    content:"";
+    position:absolute;
+    height:100%;
+    width:100%;
+    bottom:1%;
+    left:0;
+    border-bottom:3px solid royalblue;
+    transform:translateX(-100%);
+    transition:transform 650ms ease;
+}
+#message:focus + .label-message span, 
+#message:valid + .label-message span {
+    color:royalblue;
+    transform:translateY(-140%);
+}
+#message:focus + .label-message::after ,
+#message:valid + .label-message::after {
+    transform:translateX(0%);
+}
+.submit-form input {
+    font-size:1.2rem;
+}
+
+
+    .contacte-nous h2 {
+        font-size: 3rem;
+    }
+}
+@media (max-width:800px) {
+    .contacte-nous .contacte-element {
+        width: fit-content;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+    }
+    .text-form #message {
+        height:100%;
+        width:100%;
+        padding:2.5rem 1rem 1rem 1.3rem;
+    }
+    .contacte-nous .contacte-element .media {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 50px;
+        text-align: center;
+    }
+    .contacte-nous h2 {
+        font-size: 3rem;
+        font-family: 'Nunito', sans-serif;
+        width: fit-content;
+        padding:0;
+        align-self: center;
+        color: #414446;
+    }
+}
+
+
+
+@media (max-width:600px) {
+    .contacte-nous .contacte-element .contacte-input form {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:530px) {
+    .contacte-nous hr {
+        width: 50%;
+    }
+
+    .contacte-nous h2 {
+        font-size: 2rem;
+    }
+    .submit-form input {
+        font-size:0.9rem;
+    }
+}
+
+@media (max-width:380px) {
+    .contacte-nous .contacte-element .media {
+        display: flex;
+        flex-direction: column;
+    }
+    .contacte-nous .contacte-element .media h3 {
+        font-size: 1.1rem;
+    }
+    .contacte-nous .contacte-element .media b {
+        font-size: 0.78rem;
+        margin:2.2px 0;
+    }
+    .contacte-nous .contacte-element .media a {
+        margin:3px 0;
+        font-size: 0.78rem;
+    }
+    .contacte-nous hr {
+        width: 40%;
+    }
+    .contacte-nous h2 {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:300px) {
+    .contacte-nous {
+        overflow: hidden;
+    }
+}
+
+
+
+
+/*----- Start Footer -----*/
+#footer {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    background-color:#444141;
+    padding: 0px 0px 0px 0px;
+    justify-content: center;
+    position:relative;
+    margin-top: 50px;
+} 
+#footer .title {
+    background-color:rgb(85, 85, 85)
+}
+#footer .title #co {
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    padding:30px 30px 30px 50px;
+}
+#footer .title #co img {
+    width: 300px;
+    margin:10px;
+}
+#footer .title #co p {
+    font-size:1.4rem;
+    font-weight:100;
+    font-family: monospace;
+    letter-spacing: 0.3mm;
+    color: rgb(255, 255, 255);
+    margin:20px 10px 30px;
+}
+#footer .title #co ul {
+    display:flex;
+    flex-direction:row;
+}
+#footer .title #co ul li {
+    display: block;
+    text-decoration:none;
+    text-align: center;
+    width:45px;
+    height:45px;
+    margin:0 10px;
+    border-radius:510px;
+}
+#footer .title #co ul li a i {
+    font-size:1.9rem;
+    transition:color 250ms linear,background 250ms linear;
+    padding:11px;
+    border-radius: 100px;
+    color: #d6d2d2;
+}
+#footer .title #co ul li a i:hover {
+    color: #131212;
+}
+#nome {
+    width: 100%;
+    background-color: #131212;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top:-10px;
+    border-top: 2px solid rgb(173, 173, 173);
+    padding:10px 0;
+}
+#nome p {
+    color: rgb(194, 190, 190);
+    font-size:1rem;
+    font-family: sans-serif;
+    margin-top: -10px;
+}
+#nome p a {
+    font-size:1.2rem;
+    color: rgba(255, 255, 255, 0.801);
+    font-family: 'Yellowtail', cursive;
+    letter-spacing: 0.5mm;
+}
+
+#footer .footer-container {
+    width:970px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    margin:60px auto 0;
+}
+#footer .about {
+    width: 270px;
+    height:200px;
+    padding:0px 5px 10px 20px;
+}
+#footer .about h4 {
+    font-size:2rem;
+    font-weight:400;
+    font-family: 'Norican', cursive;
+    letter-spacing: 0.6mm;
+    color: rgb(255, 255, 255);
+    margin:10px 10px 10px 0;
+    padding-left: 20px;
+    border-left: 5px solid white;
+}
+#footer .about ul {
+    display:flex;
+    flex-direction:column;
+    padding:10px;
+}
+#footer .about ul li a {
+    display:block;
+    text-decoration:none;
+    font-size:1rem;
+    font-family: monospace;
+    letter-spacing: 0.3mm;
+    color: rgb(194, 190, 190);
+    padding:3px 0px;
+    border-bottom:2px solid transparent;
+}
+#footer .about ul li a span {
+    transition:padding 300ms linear;
+}
+#footer .about ul li a i {
+    transition:padding 250ms linear 250ms, color 200ms linear 200ms;
+}
+#footer .about ul li a i {
+    font-size: 0.7rem;
+}
+#footer .about ul li:hover a span {
+    color: rgb(255, 255, 255);
+    padding-left: 5px;
+}
+#footer .about ul li:hover a i {
+    color: rgb(39, 139, 233);
+    padding-left: 7px;
+}
+
+#footer .service {
+    width: 250px;
+    height:200px;
+    padding:0px 5px 20px 20px;
+}
+#footer .service h4 {
+    font-size:2rem;
+    font-weight:400;
+    font-family: 'Norican', cursive;
+    letter-spacing: 0.6mm;
+    color: rgb(255, 255, 255);
+    margin:10px 10px 10px 0;
+    padding-left: 20px;
+    border-left: 5px solid white;
+}
+#footer .service ul {
+    display:flex;
+    flex-direction:column;
+    padding:10px;
+}
+#footer .service ul li a {
+    display:block;
+    text-decoration:none;
+    font-size:1rem;
+    font-family: monospace;
+    letter-spacing: 0.3mm;
+    color: rgb(194, 190, 190);
+    padding:3px 0px;
+    border-bottom:2px solid transparent;
+}
+#footer .service ul li a span {
+    transition:padding 300ms linear;
+}
+#footer .service ul li a i {
+    transition:padding 250ms linear 250ms, color 200ms linear 200ms;
+}
+#footer .service ul li a i {
+    font-size: 0.7rem;
+}
+#footer .service ul li:hover a span {
+    color: rgb(255, 255, 255);
+    padding-left: 5px;
+}
+#footer .service ul li:hover a i {
+    color: rgb(39, 139, 233);
+    padding-left: 7px;
+}
+
+
+#footer .other {
+    width: 200px;
+    height:200px;
+    padding:0px 10px 20px 20px;
+}
+#footer .other h4 {
+    font-size:1.9rem;
+    font-weight:400;
+    font-family: 'Norican', cursive;
+    letter-spacing: 0.6mm;
+    color: rgb(255, 255, 255);
+    margin:10px 10px 10px 0;
+    padding-left: 20px;
+    border-left: 5px solid white;
+}
+#footer .other ul {
+    display:flex;
+    flex-direction:column;
+    padding:10px;
+}
+#footer .other ul li a {
+    display:block;
+    text-decoration:none;
+    font-size:1rem;
+    font-family: monospace;
+    letter-spacing: 0.3mm;
+    color: rgb(194, 190, 190);
+    padding:3px 0px;
+    border-bottom:2px solid transparent;
+}
+#footer .other ul li a span {
+    transition:padding 300ms linear;
+}
+#footer .other ul li a i {
+    transition:padding 250ms linear 250ms, color 200ms linear 200ms;
+}
+#footer .other ul li a i {
+    font-size: 0.7rem;
+}
+#footer .other ul li:hover a span {
+    color: rgb(255, 255, 255);
+    padding-left: 5px;
+}
+#footer .other ul li:hover a i {
+    color: rgb(39, 139, 233);
+    padding-left: 7px;
+}
+
+
+/*----- End Footer -----*/
+
+@media (max-width:760px) {
+    #footer {
+        display:flex;
+        flex-direction:row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    #footer .title {
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        padding:10px 0px 10px 0;
+    }
+    #footer .title #co {
+        margin:0 auto;
+    }
+    #footer .title #co ul {
+        margin:0 auto;
+    }
+
+}
+@media (max-width:540px) {
+    
+
+    #footer .title #co {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 10px 30px 20px;
+    }
+    
+
+#footer .title p {
+    font-size:1rem;
+    font-weight:100;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 0.3mm;
+    color: rgb(255, 255, 255);
+    margin:20px 10px 30px;
+}
+#footer .title ul {
+    display:flex;
+    flex-direction:row;
+}
+#footer .title ul li {
+    display: block;
+    text-decoration:none;
+    text-align: center;
+    width:45px;
+    height:45px;
+    margin:0 10px;
+    border-radius:510px;
+}
+#footer .title ul li a i {
+    font-size:1.4rem;
+    transition:color 250ms linear,background 250ms linear;
+    padding:11px;
+    border-radius: 100px;
+    color: #0f235a;
+}
+}
+
+
+@media (max-width:420px) {
+    #footer .title #co img{
+        width:200px;
+        margin:0 auto;
+    }
+    #nome p {
+        font-size:0.9rem;
+    }
+    #nome p a {
+        font-size:1.05rem;
+    }
+}
+@media (max-width:290px) {
+
+    #nome p {
+        font-size:0.8rem;
+    }
+    #nome p a {
+        font-size:0.95rem;
+    }
+    #footer .title p {
+        font-size:0.85rem;
+        font-weight:100;
+        font-family: 'Nunito', sans-serif;
+        letter-spacing: 0.3mm;
+        color: rgb(255, 255, 255);
+        margin:20px 10px 30px;
+    }
+    #footer .title #co ul {
+        padding:0;
+    }
+
+    #footer .title ul li {
+        width:40px;
+        height:40px;
+        margin:0 10px;
+    }
+    #footer .title ul li a i {
+        font-size:1.4rem;
+        padding:10px;
+    }
+    
+} 
+
+/*----- End Footer -----*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:965px) {
+    nav .logo {
+        margin:0px 0vw 0 -0vw;
+    }
+
+}
+
+@media (max-width:768px) {
+    nav .logo img{
+        width: 250px;
+    }
+}
+
+@media (max-width:635px) {
+    nav .logo img{
+        width: 200px;
+    }
+}
+@media (max-width:550px) {
+    nav {
+        flex-direction: column;
+    }
+}
